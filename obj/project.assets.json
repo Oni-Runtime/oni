@@ -1,0 +1,256 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Microsoft.ClearScript.Core/7.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/ClearScript.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/ClearScript.Core.dll": {}
+        }
+      },
+      "Microsoft.ClearScript.V8/7.3.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.ClearScript.Core": "7.3.1",
+          "Microsoft.ClearScript.V8.ICUData": "7.3.1",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/net5.0/ClearScript.V8.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/ClearScript.V8.dll": {}
+        }
+      },
+      "Microsoft.ClearScript.V8.ICUData/7.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/ClearScript.V8.ICUData.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/ClearScript.V8.ICUData.dll": {}
+        }
+      },
+      "Microsoft.ClearScript.V8.Native.linux-x64/7.3.1": {
+        "type": "package",
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/ClearScriptV8.linux-x64.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          }
+        }
+      },
+      "Newtonsoft.Json/13.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.ClearScript.Core/7.3.1": {
+      "sha512": "/zBzAGeX4ecLHYLpI4jYknyDup/G86iLwfnLAaG4AyWus1lBKgD+aAaTQwefxMTz5jKIzZUUCXNdyq4fGWInhg==",
+      "type": "package",
+      "path": "microsoft.clearscript.core/7.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "images/ClearScript.png",
+        "lib/net45/ClearScript.Core.dll",
+        "lib/net45/ClearScript.Core.xml",
+        "lib/net471/ClearScript.Core.dll",
+        "lib/net471/ClearScript.Core.xml",
+        "lib/net5.0/ClearScript.Core.dll",
+        "lib/net5.0/ClearScript.Core.xml",
+        "lib/netcoreapp3.1/ClearScript.Core.dll",
+        "lib/netcoreapp3.1/ClearScript.Core.xml",
+        "lib/netstandard2.1/ClearScript.Core.dll",
+        "lib/netstandard2.1/ClearScript.Core.xml",
+        "lib/uap10.0/ClearScript.Core.dll",
+        "lib/uap10.0/ClearScript.Core.xml",
+        "licenses/ClearScript/License.txt",
+        "licenses/V8/LICENSE",
+        "licenses/V8/LICENSE.fdlibm",
+        "licenses/V8/LICENSE.strongtalk",
+        "licenses/V8/LICENSE.v8",
+        "microsoft.clearscript.core.7.3.1.nupkg.sha512",
+        "microsoft.clearscript.core.nuspec"
+      ]
+    },
+    "Microsoft.ClearScript.V8/7.3.1": {
+      "sha512": "vdfJZH7plqXKLJTXRlxoBToPOhNzUTwlfMfUltkGjh/P+oJEPTdu/iMm1Qg6UWEHHXKWQXmNhExdXFPDTOTeHg==",
+      "type": "package",
+      "path": "microsoft.clearscript.v8/7.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "images/ClearScript.png",
+        "lib/net45/ClearScript.V8.dll",
+        "lib/net45/ClearScript.V8.xml",
+        "lib/net471/ClearScript.V8.dll",
+        "lib/net471/ClearScript.V8.xml",
+        "lib/net5.0/ClearScript.V8.dll",
+        "lib/net5.0/ClearScript.V8.xml",
+        "lib/netcoreapp3.1/ClearScript.V8.dll",
+        "lib/netcoreapp3.1/ClearScript.V8.xml",
+        "lib/netstandard2.1/ClearScript.V8.dll",
+        "lib/netstandard2.1/ClearScript.V8.xml",
+        "lib/uap10.0/ClearScript.V8.dll",
+        "lib/uap10.0/ClearScript.V8.xml",
+        "licenses/ClearScript/License.txt",
+        "licenses/V8/LICENSE",
+        "licenses/V8/LICENSE.fdlibm",
+        "licenses/V8/LICENSE.strongtalk",
+        "licenses/V8/LICENSE.v8",
+        "microsoft.clearscript.v8.7.3.1.nupkg.sha512",
+        "microsoft.clearscript.v8.nuspec"
+      ]
+    },
+    "Microsoft.ClearScript.V8.ICUData/7.3.1": {
+      "sha512": "2yBySEkhyN3sedVWnqZ6CrW6Xj5vlKMo33nLHtyzrk87MVOFI7nm+hmWZYZJRI8jRJgISjeqTmODwa3S93Vuog==",
+      "type": "package",
+      "path": "microsoft.clearscript.v8.icudata/7.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "images/ClearScript.png",
+        "lib/netstandard1.0/ClearScript.V8.ICUData.dll",
+        "lib/netstandard1.0/ClearScript.V8.ICUData.xml",
+        "licenses/ClearScript/License.txt",
+        "licenses/V8/LICENSE",
+        "licenses/V8/LICENSE.fdlibm",
+        "licenses/V8/LICENSE.strongtalk",
+        "licenses/V8/LICENSE.v8",
+        "microsoft.clearscript.v8.icudata.7.3.1.nupkg.sha512",
+        "microsoft.clearscript.v8.icudata.nuspec"
+      ]
+    },
+    "Microsoft.ClearScript.V8.Native.linux-x64/7.3.1": {
+      "sha512": "c2P+jQoRzwrev45N6xqVBke7eWsIUVlfBscGsO0lF+hNxSi4GJqCEP7FIbMHgMlOnWSk58YvqrVSDlTNcofK6g==",
+      "type": "package",
+      "path": "microsoft.clearscript.v8.native.linux-x64/7.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "images/ClearScript.png",
+        "licenses/ClearScript/License.txt",
+        "licenses/V8/LICENSE",
+        "licenses/V8/LICENSE.fdlibm",
+        "licenses/V8/LICENSE.strongtalk",
+        "licenses/V8/LICENSE.v8",
+        "microsoft.clearscript.v8.native.linux-x64.7.3.1.nupkg.sha512",
+        "microsoft.clearscript.v8.native.linux-x64.nuspec",
+        "runtimes/linux-x64/native/ClearScriptV8.linux-x64.so"
+      ]
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Microsoft.ClearScript.V8 >= 7.3.1",
+      "Microsoft.ClearScript.V8.Native.linux-x64 >= 7.3.1"
+    ]
+  },
+  "packageFolders": {
+    "/home/kaique/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/kaique/war/oni/oni.csproj",
+      "projectName": "oni",
+      "projectPath": "/home/kaique/war/oni/oni.csproj",
+      "packagesPath": "/home/kaique/.nuget/packages/",
+      "outputPath": "/home/kaique/war/oni/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/kaique/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "Microsoft.ClearScript.V8": {
+            "target": "Package",
+            "version": "[7.3.1, )"
+          },
+          "Microsoft.ClearScript.V8.Native.linux-x64": {
+            "target": "Package",
+            "version": "[7.3.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

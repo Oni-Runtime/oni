@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/kaique/war/oni/oni.csproj": {}
+  },
+  "projects": {
+    "/home/kaique/war/oni/oni.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/kaique/war/oni/oni.csproj",
+        "projectName": "oni",
+        "projectPath": "/home/kaique/war/oni/oni.csproj",
+        "packagesPath": "/home/kaique/.nuget/packages/",
+        "outputPath": "/home/kaique/war/oni/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/kaique/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.ClearScript.V8": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            },
+            "Microsoft.ClearScript.V8.Native.linux-x64": {
+              "target": "Package",
+              "version": "[7.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
