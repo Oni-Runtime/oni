@@ -3,41 +3,76 @@ using Microsoft.ClearScript.V8;
 
 internal class Program
 {
+    private static V8ScriptEngine v8 = new V8ScriptEngine();
+    private static V8ScriptEngine GetInstance() => v8;
     private static void LoadFile(string fileName)
     {
         var script = File.ReadAllText(fileName);
-        var engine = new V8ScriptEngine();
+        var engine = GetInstance();
         engine.Execute(script);
+    }
+
+    private static void SetupDependencies()
+    {
+        var engine = GetInstance();
+
+        engine.AddHostType("Console", typeof(Console));
+
+        var initFilePath = System.IO.Directory.GetCurrentDirectory() + "/oni/core/oni.js";
+
+        LoadFile(initFilePath);
     }
     private static void Main(string[] args)
     {
-        using (var engine = new V8ScriptEngine())
+        if (args.Length == 0)
         {
-            engine.AddHostType("Console", typeof(Console));
-            // engine.Execute("Console.WriteLine('Hello world!');");
-
-            bool kill = false;
-
-            while (!kill)
+            using (var engine = GetInstance())
             {
-                Console.Write("> ");
-                var line = Console.ReadLine();
-                if (line == ".exit")
+                SetupDependencies();
+
+                bool kill = false;
+
+                while (!kill)
                 {
-                    kill = true;
-                }
-                else
-                {
-                    try
+                    Console.Write("> ");
+                    
+                    Console.CancelKeyPress += delegate {
+                        kill = true;
+                    };
+
+                    var line = Console.ReadLine();
+                    if (line == ".exit")
                     {
-                        engine.Execute(line);
+                        kill = true;
                     }
-                    catch (Exception e)
+                    else
                     {
-                        Console.WriteLine(e.Message);
+                        try
+                        {
+                            engine.Execute(line);
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
                     }
                 }
             }
+        }
+        else if (args.Length == 1)
+        {
+            using (var engine = GetInstance())
+            {
+                SetupDependencies();
+
+                var inputFile = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + "/" + args[0]);
+
+                engine.Execute(inputFile);
+            }
+        }
+        else
+        {
+            Console.WriteLine("oni [script]");
         }
     }
 }
