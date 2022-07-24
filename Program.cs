@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using Microsoft.ClearScript;
+using Microsoft.ClearScript.JavaScript;
 using Microsoft.ClearScript.V8;
 
 internal class Program
@@ -63,11 +65,14 @@ internal class Program
         {
             using (var engine = GetInstance())
             {
+                
                 SetupDependencies();
+
+                engine.DocumentSettings.AccessFlags = DocumentAccessFlags.EnableFileLoading;
 
                 var inputFile = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + "/" + args[0]);
 
-                engine.Execute(inputFile);
+                engine.Execute(new DocumentInfo { Category = ModuleCategory.Standard }, inputFile);
             }
         }
         else
