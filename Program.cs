@@ -30,6 +30,8 @@ internal class Program
         {
             using (var engine = GetInstance())
             {
+                engine.AddHostObject("args", args);
+
                 SetupDependencies();
 
                 bool kill = false;
@@ -61,14 +63,23 @@ internal class Program
                 }
             }
         }
-        else if (args.Length == 1)
+        else if (args.Length >= 1)
         {
             using (var engine = GetInstance())
             {
+                engine.AddHostObject("args", args);
                 
                 SetupDependencies();
 
                 engine.DocumentSettings.AccessFlags = DocumentAccessFlags.EnableFileLoading;
+
+                // engine.DocumentSettings.ContextCallback = documentInfo => {
+                //     if (documentInfo.Name == "program.js") {
+                //         return new Dictionary<string, object> {
+                //             { "argv", typeof(args).ToHostType() }
+                //         };
+                //     }
+                // };
 
                 var inputFile = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + "/" + args[0]);
 
