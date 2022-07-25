@@ -19,6 +19,21 @@ internal class Program
         var engine = GetInstance();
 
         engine.AddHostType("Console", typeof(Console));
+        engine.AddHostObject("mscorlib", new HostTypeCollection("mscorlib", "System.Core"));
+        engine.AddHostObject("engine", engine);
+
+        // engine.DocumentSettings.ContextCallback = (documentInfo) => {
+        //     Console.WriteLine(documentInfo.Name);
+        //     if (documentInfo.Name == "oni.js") {
+        //         return new Dictionary<string, object> {
+        //             { "engine", engine },
+        //             { "File", typeof(File).ToHostType() },
+        //             { "Directory", typeof(Directory).ToHostType() },
+        //         };
+        //     } else {
+        //         return null;
+        //     }
+        // };
 
         var initFilePath = System.IO.Directory.GetCurrentDirectory() + "/oni/core/oni.js";
 
@@ -72,14 +87,6 @@ internal class Program
                 SetupDependencies();
 
                 engine.DocumentSettings.AccessFlags = DocumentAccessFlags.EnableFileLoading;
-
-                // engine.DocumentSettings.ContextCallback = documentInfo => {
-                //     if (documentInfo.Name == "program.js") {
-                //         return new Dictionary<string, object> {
-                //             { "argv", typeof(args).ToHostType() }
-                //         };
-                //     }
-                // };
 
                 var inputFile = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + "/" + args[0]);
 

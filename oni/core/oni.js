@@ -1,13 +1,25 @@
-const console = {
-    log: (...args) => Console.WriteLine(args.join('')),
-};
+const Oni = {};
+const console = {};
 
-const argv = (() => {
-    const _argv = [];
+(function () {
+    const loadFile = (filePath) => {
+        var script = mscorlib.System.IO.File.ReadAllText(mscorlib.System.IO.Directory.GetCurrentDirectory() + "/" + filePath);
+        engine.Execute(script);
+    };
 
-    for (let i = 0; i < args.Length; i++) {
-        _argv.push(args[i]);
-    }
+    loadFile('oni/core/console.js');
+    
+    const argv = (() => {
+        const _argv = [];
+    
+        for (let i = 0; i < args.Length; i++) {
+            _argv.push(args[i]);
+        }
+    
+        return _argv;
+    })();
+    Oni.argv = argv;
 
-    return _argv;
+    delete mscorlib;
+    delete engine;
 })();
