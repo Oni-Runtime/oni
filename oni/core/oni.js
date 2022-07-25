@@ -22,4 +22,5 @@ const console = {};
 
     delete mscorlib;
     delete engine;
+    delete args;
 })();

@@ -5,7 +5,7 @@ using Microsoft.ClearScript.V8;
 
 internal class Program
 {
-    private static V8ScriptEngine v8 = new V8ScriptEngine();
+    private static V8ScriptEngine v8 = new V8ScriptEngine(V8ScriptEngineFlags.EnableDynamicModuleImports);
     private static V8ScriptEngine GetInstance() => v8;
     private static void LoadFile(string fileName)
     {
@@ -88,9 +88,20 @@ internal class Program
 
                 engine.DocumentSettings.AccessFlags = DocumentAccessFlags.EnableFileLoading;
 
-                var inputFile = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + "/" + args[0]);
+                if (args.ToArray<string>().Contains("--test"))
+                {
+                    var inputFile = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + "/" + "oni/core/run-tests.js");
 
-                engine.Execute(new DocumentInfo { Category = ModuleCategory.Standard }, inputFile);
+                    engine.Execute(new DocumentInfo { Category = ModuleCategory.Standard }, inputFile);
+                }
+                else
+                {
+
+                    var inputFile = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + "/" + args[0]);
+
+                    engine.Execute(new DocumentInfo { Category = ModuleCategory.Standard }, inputFile);
+                }
+
             }
         }
         else
