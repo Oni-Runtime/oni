@@ -17,7 +17,7 @@ REPL
 dotnet run
 ```
 
-Execution:
+Execution
 
 ```
 dotnet run oni/samples/hello-from-oni.js
