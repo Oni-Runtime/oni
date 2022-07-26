@@ -1,3 +1,5 @@
 import assert from 'oni/std/assert.js';
 
-assert(Oni.argv.length > 0, 'arguments provided');
+Oni.test('should argv have length as array', () => {
+    assert(Oni.argv.length > 0, 'arguments provided');
+});
