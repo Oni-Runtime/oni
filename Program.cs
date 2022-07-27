@@ -72,7 +72,8 @@ internal class Program
                         }
                         catch (Exception e)
                         {
-                            Console.WriteLine(e.Message);
+                            Console.Error.WriteLine(e.Message);
+                            Console.Error.WriteLine(e.StackTrace);
                         }
                     }
                 }
@@ -90,16 +91,31 @@ internal class Program
 
                 if (args.ToArray<string>().Contains("--test"))
                 {
-                    var inputFile = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + "/" + "oni/core/run-tests.js");
+                    try
+                    {
+                        var inputFile = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + "/" + "oni/core/run-tests.js");
 
-                    engine.Execute(new DocumentInfo { Category = ModuleCategory.Standard }, inputFile);
+                        engine.Execute(new DocumentInfo { Category = ModuleCategory.Standard }, inputFile);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.Error.WriteLine(e.Message);
+                        Console.Error.WriteLine(e.StackTrace);
+                    }
                 }
                 else
                 {
+                    try
+                    {
+                        var inputFile = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + "/" + args[0]);
 
-                    var inputFile = File.ReadAllText(System.IO.Directory.GetCurrentDirectory() + "/" + args[0]);
-
-                    engine.Execute(new DocumentInfo { Category = ModuleCategory.Standard }, inputFile);
+                        engine.Execute(new DocumentInfo { Category = ModuleCategory.Standard }, inputFile);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.Error.WriteLine(e.Message);
+                        Console.Error.WriteLine(e.StackTrace);
+                    }
                 }
 
             }
