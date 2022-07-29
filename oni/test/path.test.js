@@ -28,3 +28,20 @@ Oni.test('should get file name on win', () => {
 Oni.test('should get file name without extension on win', () => {
     assert(path.getFileNameWithoutExtension('C:\\src\\oni.js') === 'oni', `resolve get file name without extension ${path.getFileNameWithoutExtension('C:\\src\\oni.js')}`);
 });
+
+Oni.test('should get full path on win', () => {
+    assert(path.getFullPath('C:\\src') === 'C:\\src', `resolve get full name ${path.getFullPath('C:\\src')}`);
+});
+
+Oni.test('should get path root on win', () => {
+    assert(path.getPathRoot('C:\\src') === 'C:\\', `resolve get path root ${path.getPathRoot('C:\\src')}`);
+});
+
+Oni.test('should get relative path on win', () => {
+    assert(path.getRelativePath('foo', 'C:\\foo\\bar') === '..\\..\\..\\..\\..\\..\\foo\\bar', `resolve get relative path ${path.getRelativePath('foo', 'C:\\foo\\bar')}`);
+});
+
+Oni.test('should has extension on win', () => {
+    assert(path.hasExtension('C:\\src\\foo.js'), `resolve has extension with existance`);
+    assert(!path.hasExtension('C:\\src'), `resolve has extension with non existance`);
+});

@@ -26,6 +26,22 @@ function getFileNameWithoutExtensionHandler(path) {
     return Path.GetFileNameWithoutExtension(path);
 }
 
+function getFullPathHandler(path) {
+    return Path.GetFullPath(path);
+}
+
+function getPathRootHandler(path) {
+    return Path.GetPathRoot(path);
+}
+
+function getRelativePathHandler(left, right) {
+    return Path.GetRelativePath(left, right);
+}
+
+function hasExtensionHandler(path) {
+    return Path.HasExtension(path);
+}
+
 export default {
     join: joinHandler,
     combine: combineHandler,
@@ -34,4 +50,8 @@ export default {
     getExtension: getExtensionHandler,
     getFileName: getFileNameHandler,
     getFileNameWithoutExtension: getFileNameWithoutExtensionHandler,
+    getFullPath: getFullPathHandler,
+    getPathRoot: getPathRootHandler,
+    getRelativePath: getRelativePathHandler,
+    hasExtension: hasExtensionHandler,
 }
