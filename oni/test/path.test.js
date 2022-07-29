@@ -1,18 +1,22 @@
 import assert from 'oni/std/assert.js';
 import path from 'oni/std/path.js';
 
-Oni.test('should resolve path', () => {
-    assert(path.join('C:\\foo\\bar', 'baz') === 'C:\\foo\\bar\\baz', `resolved ${path.join('C:\\foo\\bar', 'baz')}`);
+Oni.test('should join path on win', () => {
+    assert(path.join('C:\\foo\\bar', 'baz') === 'C:\\foo\\bar\\baz', `resolved join ${path.join('C:\\foo\\bar', 'baz')}`);
 });
 
-// Oni.test('should resolve path traversing up one time', () => {
-//     assert(path.resolve('/foo/bar', '../baz') === '/foo/baz', `resolved ${path.resolve('/foo/bar', '../baz')}`);
-// });
+Oni.test('should combine path on win', () => {
+    assert(path.combine('foo', 'bar') === 'foo\\bar', `resolved combine ${path.combine('foo', 'bar')}`);
+});
 
-// Oni.test('should resolve path traversing up two times', () => {
-//     assert(path.resolve('/foo/bar', '../../baz') === '/baz', `resolved ${path.resolve('/foo/bar', '../../baz')}`);
-// });
+Oni.test('should change extension on win', () => {
+    assert(path.changeExtension('foo.js', '.ts') === 'foo.ts', `resolve change extension ${path.changeExtension('foo.js', 'foo.ts')}`);
+});
 
-// Oni.test('should resolve multiples paths', () => {
-//     assert(path.resolve('/foo/bar', './baz', './buzz') === '/foo/bar/baz/buzz', `resolved ${path.resolve('/foo/bar', './baz', './buzz')}`);
-// });
+Oni.test('should get directory name on win', () => {
+    assert(path.getDirectoryName('C:\\src') === 'C:\\', `resolve get directory name ${path.getDirectoryName('C:\\src')}`);
+});
+
+Oni.test('should get extension name on win', () => {
+    assert(path.getExtension('foo.js') === '.js', `resolve get extension name ${path.getExtension('foo.js')}`);
+});
