@@ -1,6 +1,6 @@
 {
   "name": "oni",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "This javascript runtime take advantage of advanced techniques served\r by dotnet applications, with strong type resources and become a space for\r experiments of implementations of a tool set and a knowledge to run\r applications in different kind of systems.",
   "main": "oni/core/oni.js",
   "scripts": {
