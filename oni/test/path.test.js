@@ -20,3 +20,11 @@ Oni.test('should get directory name on win', () => {
 Oni.test('should get extension name on win', () => {
     assert(path.getExtension('foo.js') === '.js', `resolve get extension name ${path.getExtension('foo.js')}`);
 });
+
+Oni.test('should get file name on win', () => {
+    assert(path.getFileName('C:\\src\\oni.js') === 'oni.js', `resolve get file name ${path.getFileName('C:\\src\\oni.js')}`);
+});
+
+Oni.test('should get file name without extension on win', () => {
+    assert(path.getFileNameWithoutExtension('C:\\src\\oni.js') === 'oni', `resolve get file name without extension ${path.getFileNameWithoutExtension('C:\\src\\oni.js')}`);
+});

@@ -18,10 +18,20 @@ function getExtensionHandler(fileName) {
     return Path.GetExtension(fileName);
 }
 
+function getFileNameHandler(path) {
+    return Path.GetFileName(path);
+}
+
+function getFileNameWithoutExtensionHandler(path) {
+    return Path.GetFileNameWithoutExtension(path);
+}
+
 export default {
     join: joinHandler,
     combine: combineHandler,
     changeExtension: changeExtensionHandler,
     getDirectoryName: getDirectoryNameHandler,
     getExtension: getExtensionHandler,
+    getFileName: getFileNameHandler,
+    getFileNameWithoutExtension: getFileNameWithoutExtensionHandler,
 }
