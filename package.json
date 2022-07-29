@@ -4,7 +4,8 @@
   "description": "This javascript runtime take advantage of advanced techniques served\r by dotnet applications, with strong type resources and become a space for\r experiments of implementations of a tool set and a knowledge to run\r applications in different kind of systems.",
   "main": "oni/core/oni.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate:changelog": "auto-changelog -p && git add CHANGELOG.md"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Oni-Runtime/oni/issues"
   },
-  "homepage": "https://github.com/Oni-Runtime/oni#readme"
+  "homepage": "https://github.com/Oni-Runtime/oni#readme",
+  "devDependencies": {
+    "auto-changelog": "^2.4.0"
+  }
 }
