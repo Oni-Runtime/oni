@@ -21,14 +21,13 @@ internal class Program
         engine.AddHostType("Console", typeof(Console));
         engine.AddHostObject("mscorlib", new HostTypeCollection("mscorlib", "System.Core"));
         engine.AddHostObject("engine", engine);
+        engine.AddHostType("Path", typeof(Path));
 
         // engine.DocumentSettings.ContextCallback = (documentInfo) => {
         //     Console.WriteLine(documentInfo.Name);
-        //     if (documentInfo.Name == "oni.js") {
+        //     if (documentInfo.Name == "path.js") {
         //         return new Dictionary<string, object> {
-        //             { "engine", engine },
-        //             { "File", typeof(File).ToHostType() },
-        //             { "Directory", typeof(Directory).ToHostType() },
+        //             { "Path", typeof(Path).ToHostType() },
         //         };
         //     } else {
         //         return null;

@@ -9,7 +9,8 @@
       "oni/1.0.0": {
         "dependencies": {
           "Microsoft.ClearScript.V8": "7.3.1",
-          "Microsoft.ClearScript.V8.Native.linux-x64": "7.3.1"
+          "Microsoft.ClearScript.V8.Native.linux-x64": "7.3.1",
+          "Microsoft.ClearScript.V8.Native.win-x64": "7.3.1"
         },
         "runtime": {
           "oni.dll": {}
@@ -50,6 +51,15 @@
             "rid": "linux-x64",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Microsoft.ClearScript.V8.Native.win-x64/7.3.1": {
+        "runtimeTargets": {
+          "runtimes/win-x64/native/ClearScriptV8.win-x64.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "7.3.1.0"
           }
         }
       },
@@ -96,6 +106,13 @@
       "sha512": "sha512-c2P+jQoRzwrev45N6xqVBke7eWsIUVlfBscGsO0lF+hNxSi4GJqCEP7FIbMHgMlOnWSk58YvqrVSDlTNcofK6g==",
       "path": "microsoft.clearscript.v8.native.linux-x64/7.3.1",
       "hashPath": "microsoft.clearscript.v8.native.linux-x64.7.3.1.nupkg.sha512"
+    },
+    "Microsoft.ClearScript.V8.Native.win-x64/7.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-psZIpo7A1fL7slnxgoKrOD+Afp766yYy1AHGR1x0fdkz4HUfG6THEPHAnM+RWSEueRsUAhDClQ/5Y/cs0syTVg==",
+      "path": "microsoft.clearscript.v8.native.win-x64/7.3.1",
+      "hashPath": "microsoft.clearscript.v8.native.win-x64.7.3.1.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",

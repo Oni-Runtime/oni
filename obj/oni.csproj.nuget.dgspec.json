@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/kaique/war/oni/oni.csproj": {}
+    "C:\\Users\\kaeyo\\source\\repos\\oni\\oni.csproj": {}
   },
   "projects": {
-    "/home/kaique/war/oni/oni.csproj": {
+    "C:\\Users\\kaeyo\\source\\repos\\oni\\oni.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kaique/war/oni/oni.csproj",
+        "projectUniqueName": "C:\\Users\\kaeyo\\source\\repos\\oni\\oni.csproj",
         "projectName": "oni",
-        "projectPath": "/home/kaique/war/oni/oni.csproj",
-        "packagesPath": "/home/kaique/.nuget/packages/",
-        "outputPath": "/home/kaique/war/oni/obj/",
+        "projectPath": "C:\\Users\\kaeyo\\source\\repos\\oni\\oni.csproj",
+        "packagesPath": "C:\\Users\\kaeyo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kaeyo\\source\\repos\\oni\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/kaique/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\kaeyo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -45,6 +45,10 @@
             "Microsoft.ClearScript.V8.Native.linux-x64": {
               "target": "Package",
               "version": "[7.3.1, )"
+            },
+            "Microsoft.ClearScript.V8.Native.win-x64": {
+              "target": "Package",
+              "version": "[7.3.1, )"
             }
           },
           "imports": [
@@ -62,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

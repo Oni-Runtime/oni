@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "xKhKci5Gfyj+wjAMsbBrmS9q1gnyx5fD1CDD+Ucn0b9DgRaKk+t4940stjrg4goDPBwjBLyC8nb04GWTKbkFBw==",
+  "dgSpecHash": "KOLxEPAIFS/IeErCokkqnfLmBKffMAL4wA3OgkySUazkpciN/8MlcYNeoZ63t85CfVbyM7mFniVt510yjn0g4A==",
   "success": true,
-  "projectFilePath": "/home/kaique/war/oni/oni.csproj",
+  "projectFilePath": "C:\\Users\\kaeyo\\source\\repos\\oni\\oni.csproj",
   "expectedPackageFiles": [
-    "/home/kaique/.nuget/packages/microsoft.clearscript.core/7.3.1/microsoft.clearscript.core.7.3.1.nupkg.sha512",
-    "/home/kaique/.nuget/packages/microsoft.clearscript.v8/7.3.1/microsoft.clearscript.v8.7.3.1.nupkg.sha512",
-    "/home/kaique/.nuget/packages/microsoft.clearscript.v8.icudata/7.3.1/microsoft.clearscript.v8.icudata.7.3.1.nupkg.sha512",
-    "/home/kaique/.nuget/packages/microsoft.clearscript.v8.native.linux-x64/7.3.1/microsoft.clearscript.v8.native.linux-x64.7.3.1.nupkg.sha512",
-    "/home/kaique/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\kaeyo\\.nuget\\packages\\microsoft.clearscript.core\\7.3.1\\microsoft.clearscript.core.7.3.1.nupkg.sha512",
+    "C:\\Users\\kaeyo\\.nuget\\packages\\microsoft.clearscript.v8\\7.3.1\\microsoft.clearscript.v8.7.3.1.nupkg.sha512",
+    "C:\\Users\\kaeyo\\.nuget\\packages\\microsoft.clearscript.v8.icudata\\7.3.1\\microsoft.clearscript.v8.icudata.7.3.1.nupkg.sha512",
+    "C:\\Users\\kaeyo\\.nuget\\packages\\microsoft.clearscript.v8.native.linux-x64\\7.3.1\\microsoft.clearscript.v8.native.linux-x64.7.3.1.nupkg.sha512",
+    "C:\\Users\\kaeyo\\.nuget\\packages\\microsoft.clearscript.v8.native.win-x64\\7.3.1\\microsoft.clearscript.v8.native.win-x64.7.3.1.nupkg.sha512",
+    "C:\\Users\\kaeyo\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

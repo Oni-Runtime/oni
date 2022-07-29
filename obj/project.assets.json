@@ -43,6 +43,18 @@
           }
         }
       },
+      "Microsoft.ClearScript.V8.Native.win-x64/7.3.1": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.ClearScript.V8.Native.win-x64.props": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/ClearScriptV8.win-x64.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -154,6 +166,29 @@
         "runtimes/linux-x64/native/ClearScriptV8.linux-x64.so"
       ]
     },
+    "Microsoft.ClearScript.V8.Native.win-x64/7.3.1": {
+      "sha512": "psZIpo7A1fL7slnxgoKrOD+Afp766yYy1AHGR1x0fdkz4HUfG6THEPHAnM+RWSEueRsUAhDClQ/5Y/cs0syTVg==",
+      "type": "package",
+      "path": "microsoft.clearscript.v8.native.win-x64/7.3.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/Microsoft.ClearScript.V8.Native.win-x64.props",
+        "images/ClearScript.png",
+        "licenses/ClearScript/License.txt",
+        "licenses/V8/LICENSE",
+        "licenses/V8/LICENSE.fdlibm",
+        "licenses/V8/LICENSE.strongtalk",
+        "licenses/V8/LICENSE.v8",
+        "microsoft.clearscript.v8.native.win-x64.7.3.1.nupkg.sha512",
+        "microsoft.clearscript.v8.native.win-x64.nuspec",
+        "runtimes/win-x64/native/ClearScriptV8.win-x64.dll",
+        "tools/Install.ps1",
+        "tools/Uninstall.ps1"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -185,23 +220,24 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.ClearScript.V8 >= 7.3.1",
-      "Microsoft.ClearScript.V8.Native.linux-x64 >= 7.3.1"
+      "Microsoft.ClearScript.V8.Native.linux-x64 >= 7.3.1",
+      "Microsoft.ClearScript.V8.Native.win-x64 >= 7.3.1"
     ]
   },
   "packageFolders": {
-    "/home/kaique/.nuget/packages/": {}
+    "C:\\Users\\kaeyo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kaique/war/oni/oni.csproj",
+      "projectUniqueName": "C:\\Users\\kaeyo\\source\\repos\\oni\\oni.csproj",
       "projectName": "oni",
-      "projectPath": "/home/kaique/war/oni/oni.csproj",
-      "packagesPath": "/home/kaique/.nuget/packages/",
-      "outputPath": "/home/kaique/war/oni/obj/",
+      "projectPath": "C:\\Users\\kaeyo\\source\\repos\\oni\\oni.csproj",
+      "packagesPath": "C:\\Users\\kaeyo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kaeyo\\source\\repos\\oni\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/kaique/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\kaeyo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -232,6 +268,10 @@
           "Microsoft.ClearScript.V8.Native.linux-x64": {
             "target": "Package",
             "version": "[7.3.1, )"
+          },
+          "Microsoft.ClearScript.V8.Native.win-x64": {
+            "target": "Package",
+            "version": "[7.3.1, )"
           }
         },
         "imports": [
@@ -249,7 +289,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
