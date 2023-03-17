@@ -67,7 +67,7 @@ internal class Program
                     {
                         try
                         {
-                            engine.Execute(line);
+                            Console.WriteLine(engine.ExecuteCommand(line));
                         }
                         catch (Exception e)
                         {
