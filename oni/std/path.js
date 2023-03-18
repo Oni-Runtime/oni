@@ -1,57 +1,133 @@
-function joinHandler(left, right) {
-    return Path.Join(left, right);
+function changeExtension(left, right) {
+  return Path.ChangeExtension(left, right);
 }
 
-function combineHandler(left, right) {
-    return Path.Combine(left, right);
+function exists(args) {
+  return Path.Exists(...args);
 }
 
-function changeExtensionHandler(left, right) {
-    return Path.ChangeExtension(left, right);
+function getDirectoryName(value) {
+  return Path.GetDirectoryName(value);
 }
 
-function getDirectoryNameHandler(path) {
-    return Path.GetDirectoryName(path);
+function getExtension(value) {
+  return Path.GetExtension(value);
 }
 
-function getExtensionHandler(fileName) {
-    return Path.GetExtension(fileName);
+function getFileName(value) {
+  return Path.GetFileName(value);
 }
 
-function getFileNameHandler(path) {
-    return Path.GetFileName(path);
+function getFileNameWithoutExtension(value) {
+  return Path.GetFileNameWithoutExtension(value);
 }
 
-function getFileNameWithoutExtensionHandler(path) {
-    return Path.GetFileNameWithoutExtension(path);
+function getRandomFileName() {
+  return Path.GetRandomFileName();
 }
 
-function getFullPathHandler(path) {
-    return Path.GetFullPath(path);
+function isPathFullyQualified(value) {
+  return Path.IsPathFullyQualified(value);
 }
 
-function getPathRootHandler(path) {
-    return Path.GetPathRoot(path);
+function hasExtension(value) {
+  return Path.HasExtension(value);
 }
 
-function getRelativePathHandler(left, right) {
-    return Path.GetRelativePath(left, right);
+function combine(left, right) {
+  return Path.Combine(left, right);
 }
 
-function hasExtensionHandler(path) {
-    return Path.HasExtension(path);
+function join(left, right) {
+  return Path.Join(left, right);
+}
+
+function tryJoin(args) {
+  return Path.TryJoin(...args);
+}
+
+function getRelativePath(left, right) {
+  return Path.GetRelativePath(left, right);
+}
+
+function trimEndingDirectorySeparator(args) {
+  return Path.TrimEndingDirectorySeparator(...args);
+}
+
+function endsInDirectorySeparator(args) {
+  return Path.EndsInDirectorySeparator(...args);
+}
+
+function getInvalidFileNameChars(args) {
+  return Path.GetInvalidFileNameChars(...args);
+}
+
+function getInvalidPathChars(args) {
+  return Path.GetInvalidPathChars(...args);
+}
+
+function getFullPath(value) {
+  return Path.GetFullPath(value);
+}
+
+function getTempPath() {
+  return Path.GetTempPath();
+}
+
+function getTempFileName(args) {
+  return Path.GetTempFileName(...args);
+}
+
+function isPathRooted(args) {
+  return Path.IsPathRooted(...args);
+}
+
+function getPathRoot(value) {
+  return Path.GetPathRoot(value);
+}
+
+function getType(args) {
+  return Path.GetType(...args);
+}
+
+function toString(args) {
+  return Path.ToString(...args);
+}
+
+function equals(args) {
+  return Path.Equals(...args);
+}
+
+function getHashCode(args) {
+  return Path.GetHashCode(...args);
 }
 
 export default {
-    join: joinHandler,
-    combine: combineHandler,
-    changeExtension: changeExtensionHandler,
-    getDirectoryName: getDirectoryNameHandler,
-    getExtension: getExtensionHandler,
-    getFileName: getFileNameHandler,
-    getFileNameWithoutExtension: getFileNameWithoutExtensionHandler,
-    getFullPath: getFullPathHandler,
-    getPathRoot: getPathRootHandler,
-    getRelativePath: getRelativePathHandler,
-    hasExtension: hasExtensionHandler,
+  changeExtension,
+  exists,
+  getDirectoryName,
+  getExtension,
+  getFileName,
+  getFileNameWithoutExtension,
+  getRandomFileName,
+  isPathFullyQualified,
+  hasExtension,
+  combine,
+  join,
+  tryJoin,
+  getRelativePath,
+  trimEndingDirectorySeparator,
+  endsInDirectorySeparator,
+  getInvalidFileNameChars,
+  getInvalidPathChars,
+  getFullPath,
+  getTempPath,
+  getTempFileName,
+  isPathRooted,
+  getPathRoot,
+  getType,
+  toString,
+  equals,
+  getHashCode,
 }
+
