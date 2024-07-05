@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net8.0": {
       "Microsoft.ClearScript.Core/7.3.1": {
         "type": "package",
         "compile": {
@@ -234,7 +234,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net8.0": [
       "Microsoft.ClearScript.V8 >= 7.3.1",
       "Microsoft.ClearScript.V8.Native.linux-x64 >= 7.3.1",
       "Microsoft.ClearScript.V8.Native.win-x64 >= 7.3.1"
@@ -247,11 +247,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kaeyo\\source\\repos\\oni\\oni.csproj",
+      "projectUniqueName": "D:\\war\\oni-workspace\\oni\\oni.csproj",
       "projectName": "oni",
-      "projectPath": "C:\\Users\\kaeyo\\source\\repos\\oni\\oni.csproj",
+      "projectPath": "D:\\war\\oni-workspace\\oni\\oni.csproj",
       "packagesPath": "C:\\Users\\kaeyo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kaeyo\\source\\repos\\oni\\obj\\",
+      "outputPath": "D:\\war\\oni-workspace\\oni\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -262,16 +262,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net8.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {}
         }
       },
@@ -279,11 +278,16 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "dependencies": {
           "Microsoft.ClearScript.V8": {
             "target": "Package",
@@ -314,7 +318,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

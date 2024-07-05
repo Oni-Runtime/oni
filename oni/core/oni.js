@@ -8,6 +8,19 @@ const console = {};
     };
 
     loadFile('oni/core/console.js');
+
+    // Add a conversion function for dynamic objects
+    function convertToDynamicObject(dict) {
+        const target = {};
+        const dictObject = Converter.ConvertToDynamicObject(dict);
+        Object.keys(dictObject).filter(function (key) {
+            if (dictObject[key].constructor.toString().indexOf('HostDelegate') === -1) {
+                target[key] = dictObject[key];
+            }
+        });
+        return target;
+    }
+    Oni.convertToDynamicObject = convertToDynamicObject;
     
     // Begin program suite common
     const argv = (() => {
